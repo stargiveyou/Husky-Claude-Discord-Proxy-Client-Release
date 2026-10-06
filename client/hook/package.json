@@ -1,0 +1,14 @@
+{
+  "name": "husky-hook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Husky Proxy 훅 — Claude Code 권한 요청을 서버/디스코드로 중계한다",
+  "bin": {
+    "husky-hook": "./husky-hook.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "comment": "dependencies가 비어 있는 것은 의도된 설계다. 훅은 Claude Code가 도구 실행마다 spawn하는 프로세스라 기동이 빨라야 하고, 개발 PC에 npm install을 요구하지 않아야 한다. 에이전트(../agent)와 패키지를 나눠 둔 이유도 이것이다 — 그쪽의 node-notifier·node-pty 설치가 실패해도 훅은 영향받지 않는다. 여기에 라이브러리를 추가하지 말 것. CommonJS이므로 type 필드를 넣어서도 안 된다."
+}

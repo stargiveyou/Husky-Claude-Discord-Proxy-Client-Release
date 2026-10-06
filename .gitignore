@@ -1,0 +1,10 @@
+# Per-PC credentials and local configuration
+client/.husky.env
+client/.husky.env.bak*
+client/agent/
+*.husky-backup
+.env
+.env.*
+!.env.example
+*.pem
+.npmrc

@@ -1,0 +1,27 @@
+{
+  "name": "husky-agent",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Husky Proxy Windows 에이전트 — 토스트 알림 승인, 세션 하트비트, (추후) PTY 브릿지",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "pack": "node scripts/pack-agent.mjs"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.5",
+    "@types/node-notifier": "^8.0.5",
+    "@types/ws": "^8.5.12",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "comment": "node-pty는 A3(PTY 래퍼) 단계에서 optionalDependencies로 추가한다. 네이티브 모듈이라 빌드 도구가 필요할 수 있으므로 서버/훅 패키지와 분리해 둔다."
+}
